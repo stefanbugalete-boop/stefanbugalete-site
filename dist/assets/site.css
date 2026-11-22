@@ -746,3 +746,11 @@ body { font-weight: 400; }
   .ct3-facts { grid-template-columns: 1fr; }
   .ct3-facts div:nth-child(odd) { padding-right: 0; }
 }
+
+/* ---------- Info: the page title is "info", like every other page; the intro follows below it ---------- */
+.ab2-head + .ab2-intro { padding-top: clamp(40px, 5vw, 72px); min-height: 0; }
+.ab3-title { margin-bottom: clamp(12px, 2vw, 28px); }
+@media (max-width: 860px) {
+  /* a later rule set two columns for every width; on a phone the intro is one column again */
+  .ab2-intro { grid-template-columns: 1fr; }
+}

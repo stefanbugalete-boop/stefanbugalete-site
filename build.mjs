@@ -259,9 +259,12 @@ function about(t) {
 <body class="page-about">
 ${header(t, page)}
 <main id="main">
-  <section class="ab2-intro" aria-labelledby="ab-h">
+  <section class="pf-head ab2-head" aria-labelledby="ab-h">
+    <h1 id="ab-h" class="pf-head__h1" data-enter>${esc(t.nav.about.toLowerCase())}</h1>
+  </section>
+  <section class="ab2-intro" aria-label="${esc(SITE.name)}">
     <div class="ab2-intro__words">
-      <h1 id="ab-h" class="ab2-name" data-enter><span class="sr-only">${esc(t.nav.about)} · </span><span>${esc(first)}</span><span>${esc(last.join(' '))}</span></h1>
+      <p class="ab2-name" data-enter><span>${esc(first)}</span><span>${esc(last.join(' '))}</span></p>
       <p class="ab2-role" data-enter>${esc(a.role)}</p>
       <p class="ab-lead ab2-lead" data-enter>${esc(lead)}</p>
     </div>
@@ -352,8 +355,9 @@ ${header(t, page)}
   </figure>
   <div class="ab3-body">
     <header class="ab3-head">
-      <p class="label" data-enter>${esc(t.nav.about)} · ${esc(L.offices)}</p>
-      <h1 class="ab3-h1" data-enter>${esc(a.bio[0])}</h1>
+      <h1 class="pf-head__h1 ab3-title" data-enter>${esc(t.nav.about.toLowerCase())}</h1>
+      <p class="label" data-enter>${esc(SITE.name)} · ${esc(L.offices)}</p>
+      <p class="ab3-h1" data-enter>${esc(a.bio[0])}</p>
       <div class="ab3-bio" data-enter>${a.bio.slice(1).map((x) => `<p>${esc(x)}</p>`).join('')}</div>
     </header>
     ${sec(1, 'sv-h', L.services, `<ol class="ab3-list">${a.services.map((s, i) => `<li><span>${pad(i + 1)}</span>${esc(s)}</li>`).join('')}</ol>`)}
