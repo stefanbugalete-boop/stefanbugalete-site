@@ -1,0 +1,37 @@
+# PROIECTE – lista de proiecte pentru site
+#
+# Cum se folosește:
+#  1. Fiecare proiect este un bloc de rânduri. Blocurile se despart cu o linie care conține doar: ---
+#  2. Completează câmpurile de după ":". Câmpurile cu (opțional) pot rămâne goale.
+#  3. La "Poze" pune linkul folderului din Google Drive cu poze sau randări.
+#     Folderul trebuie partajat: Partajare > Acces general > "Oricine are linkul" > Persoană cu drept de vizualizare.
+#     Pozele apar în ordinea numelor de fișiere (01.jpg, 02.jpg …). Prima este coperta.
+#  4. Categorie: Architecture, Interior sau Health.
+#  5. Salvează fișierul, apoi rulează:  node import-drive.mjs
+#
+# Rândurile care încep cu # sunt comentarii și sunt ignorate.
+# Proiectul de mai jos este un EXEMPLU: înlocuiește-l cu proiectele tale (sau șterge-l).
+
+Nume: Penthouse R. 
+Nume EN (opțional):
+Categorie: Interior 
+An (opțional): 2025
+Suprafață (opțional): 120 m²
+Oraș (opțional): Bucuresti
+Descriere: Proiect de design interior pentru un penthouse contemporan, cu living open-space pe două niveluri, scară sculpturală și o paletă luminoasă de tonuri calde, echilibrată prin accente negre.
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1ZiQJFc-AvoDKgsUcInREWofqROEqnzN6?usp=sharing
+
+---
+
+Nume: Opera Dental 
+Nume EN (opțional):
+Categorie: Health
+An (opțional): 2025
+Suprafață (opțional): 300
+Oraș (opțional): Bucuresti
+Descriere:
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1nlAbW9LO2wSDKD-PGEPbpBc_LXjHXNdb?usp=sharing
+
+---
