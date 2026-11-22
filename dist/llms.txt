@@ -14,10 +14,10 @@
 - Instagram: https://www.instagram.com/stefan.bugalete/
 
 ## Pages
-- [Home](https://stefanbugalete.com/en/) · [Acasă](https://stefanbugalete.com/)
-- [Work](https://stefanbugalete.com/en/work/) · [Lucrări](https://stefanbugalete.com/lucrari/)
-- [Info](https://stefanbugalete.com/en/info/) · [Info RO](https://stefanbugalete.com/info/)
-- [Contact](https://stefanbugalete.com/en/contact/) · [Contact RO](https://stefanbugalete.com/contact/)
+- [Home](https://stefanbugalete.com/) · [Acasă](https://stefanbugalete.com/ro/)
+- [Work](https://stefanbugalete.com/work/) · [Lucrări](https://stefanbugalete.com/ro/lucrari/)
+- [Info](https://stefanbugalete.com/info/) · [Info RO](https://stefanbugalete.com/ro/info/)
+- [Contact](https://stefanbugalete.com/contact/) · [Contact RO](https://stefanbugalete.com/ro/contact/)
 
 ## Questions
 - What services does Ștefan Bugalete offer? Architecture, interior design, site supervision and turnkey delivery, for premium homes and medical clinics.

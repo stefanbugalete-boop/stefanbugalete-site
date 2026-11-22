@@ -49,7 +49,7 @@ function graphBase(t) {
       jobTitle: t.lang === 'ro' ? 'Arhitect și designer de interior' : 'Architect and interior designer',
       image: abs('/assets/stefan-portrait.jpg'), worksFor: { '@id': ID.studio }, award: awards, sameAs: [SITE.instagram], url: abs(ROUTES.about[t.lang]),
     },
-    { '@type': 'WebSite', '@id': ID.site, url: SITE.domain + '/', name: SITE.brand, inLanguage: ['ro', 'en'], publisher: { '@id': ID.studio } },
+    { '@type': 'WebSite', '@id': ID.site, url: SITE.domain + '/', name: SITE.brand, inLanguage: ['en', 'ro'], publisher: { '@id': ID.studio } },
   ];
 }
 function ld(t, page, extra = []) {
@@ -70,7 +70,7 @@ function head(t, page) {
 ${MOCKUP ? '<meta name="robots" content="noindex"><!-- mockup photos: remove placeholder:true in content.mjs when real projects are in -->\n' : ''}<link rel="canonical" href="${abs(page.path)}">
 <link rel="alternate" hreflang="ro" href="${abs(page.alt.ro)}">
 <link rel="alternate" hreflang="en" href="${abs(page.alt.en)}">
-<link rel="alternate" hreflang="x-default" href="${abs(page.alt.ro)}">
+<link rel="alternate" hreflang="x-default" href="${abs(page.alt.en)}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${esc(SITE.brand)}">
 <meta property="og:locale" content="${t.locale}">
@@ -469,7 +469,7 @@ function write(path, html) {
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, html);
 }
-for (const lang of ['ro', 'en']) {
+for (const lang of ['en', 'ro']) {
   const t = T[lang];
   write(ROUTES.home[lang], home(t));
   write(ROUTES.portfolio[lang], portfolio(t));
@@ -516,7 +516,7 @@ const allPages = [
 ];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${allPages.flatMap((r) => ['ro', 'en'].map((l) => `  <url><loc>${abs(r[l])}</loc><lastmod>${BUILT}</lastmod><xhtml:link rel="alternate" hreflang="ro" href="${abs(r.ro)}"/><xhtml:link rel="alternate" hreflang="en" href="${abs(r.en)}"/></url>`)).join('\n')}
+${allPages.flatMap((r) => ['en', 'ro'].map((l) => `  <url><loc>${abs(r[l])}</loc><lastmod>${BUILT}</lastmod><xhtml:link rel="alternate" hreflang="ro" href="${abs(r.ro)}"/><xhtml:link rel="alternate" hreflang="en" href="${abs(r.en)}"/></url>`)).join('\n')}
 </urlset>
 `);
 
@@ -546,6 +546,6 @@ write('llms.txt', `# ${SITE.brand}
 ${en.about.faq.map((f) => `- ${f.q} ${f.a}`).join('\n')}
 `);
 
-write('404.html', `<!doctype html><html lang="ro" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pagina nu există | ${esc(SITE.name)}</title><meta name="robots" content="noindex"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300..700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/site.css"></head><body><main id="main" class="notfound"><div class="wrap">${ICON}<h1 class="display">404</h1><p class="lead">Pagina nu există. This page does not exist.</p><p>${btn('/', 'Acasă', 'btn--light')}</p></div></main></body></html>`);
+write('404.html', `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found | ${esc(SITE.name)}</title><meta name="robots" content="noindex"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300..700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/site.css"></head><body><main id="main" class="notfound"><div class="wrap">${ICON}<h1 class="display">404</h1><p class="lead">This page does not exist. <span lang="ro">Pagina nu există.</span></p><p>${btn('/', 'Home', 'btn--light')}</p></div></main></body></html>`);
 
 console.log(`built ${allPages.length * 2} pages${MOCKUP ? ' (mockup: noindex on)' : ''}`);

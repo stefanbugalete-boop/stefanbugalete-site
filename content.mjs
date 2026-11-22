@@ -15,15 +15,16 @@ export const SITE = {
 
 // Alternative versions of the Info and Contact pages, to compare. Not in the menu, not indexed, not in the sitemap.
 export const VARIANTS = {
-  about:   { ro: '/info/v2/',    en: '/en/info/v2/' },
-  contact: { ro: '/contact/v2/', en: '/en/contact/v2/' },
+  about:   { ro: '/ro/info/v2/',    en: '/info/v2/' },
+  contact: { ro: '/ro/contact/v2/', en: '/contact/v2/' },
 };
 
 export const ROUTES = {
-  home:      { ro: '/',            en: '/en/' },
-  portfolio: { ro: '/lucrari/',    en: '/en/work/' },
-  about:     { ro: '/info/',       en: '/en/info/' },
-  contact:   { ro: '/contact/',    en: '/en/contact/' },
+  // English is the default language, at the root of the site; Romanian lives under /ro/.
+  home:      { ro: '/ro/',         en: '/' },
+  portfolio: { ro: '/ro/lucrari/', en: '/work/' },
+  about:     { ro: '/ro/info/',    en: '/info/' },
+  contact:   { ro: '/ro/contact/', en: '/contact/' },
 };
 
 // Category ids and their labels (the same words in both languages, as requested).
