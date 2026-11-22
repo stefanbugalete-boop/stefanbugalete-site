@@ -13,10 +13,16 @@ export const SITE = {
   brand: 'Ștefan Bugalete Architecture & Design',
 };
 
+// Alternative versions of the Info and Contact pages, to compare. Not in the menu, not indexed, not in the sitemap.
+export const VARIANTS = {
+  about:   { ro: '/info/v2/',    en: '/en/info/v2/' },
+  contact: { ro: '/contact/v2/', en: '/en/contact/v2/' },
+};
+
 export const ROUTES = {
   home:      { ro: '/',            en: '/en/' },
-  portfolio: { ro: '/portofoliu/', en: '/en/portfolio/' },
-  about:     { ro: '/despre/',     en: '/en/about/' },
+  portfolio: { ro: '/lucrari/',    en: '/en/work/' },
+  about:     { ro: '/info/',       en: '/en/info/' },
   contact:   { ro: '/contact/',    en: '/en/contact/' },
 };
 
@@ -82,7 +88,7 @@ export const AWARDS = [
   },
 ];
 
-// Press and mentions on the About page. PLACEHOLDERS: replace with real articles, interviews, publications.
+// Press and mentions on the Info page. PLACEHOLDERS: replace with real articles, interviews, publications.
 // url is optional (leave '' for no link).
 export const MENTIONS = [
   { year: '2026', outlet: '[Publicație]', title: { ro: '[Titlul articolului sau al mențiunii]', en: '[Article or mention title]' }, url: '' },
@@ -93,12 +99,12 @@ export const T = {
   ro: {
     lang: 'ro', locale: 'ro_RO', other: 'en', switchLabel: 'EN', switchName: 'English',
     skip: 'Sari la conținut', menu: 'Meniu', close: 'Închide',
-    nav: { portfolio: 'Portofoliu', about: 'Despre', contact: 'Contact' },
+    nav: { portfolio: 'Lucrări', about: 'Info', contact: 'Contact' },
     tagline: 'Arhitectură & design',
     all: 'Toate',
     view: 'Vezi proiectul',
     next: 'Proiectul următor',
-    back: 'Înapoi la portofoliu',
+    back: 'Înapoi la lucrări',
     descriptionSoon: 'Descrierea proiectului urmează.',
     category: 'Categorie',
     footerEmail: 'Scrie-ne',
@@ -115,7 +121,7 @@ export const T = {
       explore: 'Explorează proiectele',
       indexLabel: 'Proiecte',
       selectedTitle: 'Proiecte selectate',
-      allProjects: 'Tot portofoliul',
+      allProjects: 'Toate lucrările',
       statement: 'Arhitectura, materialele și viața de zi cu zi, aduse într-un echilibru clar.',
       awardsTitle: 'Premii',
       closeTitle: 'Ai un spațiu în minte?',
@@ -124,16 +130,16 @@ export const T = {
     },
 
     portfolio: {
-      title: 'Portofoliu | Ștefan Bugalete, arhitectură și design interior',
+      title: 'Lucrări | Ștefan Bugalete, arhitectură și design interior',
       description: 'Proiecte de arhitectură, design interior și clinici medicale semnate de Ștefan Bugalete.',
-      h1: 'Portofoliu',
+      h1: 'Lucrări',
       lead: 'Arhitectură, interioare și spații medicale.',
       filterLabel: 'Filtrează după categorie',
       count: (n) => n === 1 ? '1 proiect' : `${n} proiecte`,
     },
 
     about: {
-      title: 'Despre Ștefan Bugalete, arhitect și designer de interior',
+      title: 'Info | Ștefan Bugalete, arhitect și designer de interior',
       description: 'Ștefan Bugalete este arhitect și fondatorul biroului Ștefan Bugalete Architecture & Design, cu sedii în Iași și București.',
       h1: 'Ștefan Bugalete',
       role: 'Arhitect și fondator',
@@ -179,12 +185,12 @@ export const T = {
   en: {
     lang: 'en', locale: 'en_GB', other: 'ro', switchLabel: 'RO', switchName: 'Română',
     skip: 'Skip to content', menu: 'Menu', close: 'Close',
-    nav: { portfolio: 'Portfolio', about: 'About', contact: 'Contact' },
+    nav: { portfolio: 'Work', about: 'Info', contact: 'Contact' },
     tagline: 'Architecture & design',
     all: 'All',
     view: 'View project',
     next: 'Next project',
-    back: 'Back to portfolio',
+    back: 'Back to work',
     descriptionSoon: 'Project description coming soon.',
     category: 'Category',
     footerEmail: 'Write to us',
@@ -201,7 +207,7 @@ export const T = {
       explore: 'Explore the projects',
       indexLabel: 'Projects',
       selectedTitle: 'Selected projects',
-      allProjects: 'Full portfolio',
+      allProjects: 'All work',
       statement: 'Architecture, materials and everyday life, brought into clear balance.',
       awardsTitle: 'Awards',
       closeTitle: 'Have a space in mind?',
@@ -210,16 +216,16 @@ export const T = {
     },
 
     portfolio: {
-      title: 'Portfolio | Ștefan Bugalete, architecture and interior design',
+      title: 'Work | Ștefan Bugalete, architecture and interior design',
       description: 'Architecture, interior design and medical clinic projects by Ștefan Bugalete.',
-      h1: 'Portfolio',
+      h1: 'Work',
       lead: 'Architecture, interiors and medical spaces.',
       filterLabel: 'Filter by category',
       count: (n) => n === 1 ? '1 project' : `${n} projects`,
     },
 
     about: {
-      title: 'About Ștefan Bugalete, architect and interior designer',
+      title: 'Info | Ștefan Bugalete, architect and interior designer',
       description: 'Ștefan Bugalete is an architect and the founder of Ștefan Bugalete Architecture & Design, with offices in Iași and Bucharest.',
       h1: 'Ștefan Bugalete',
       role: 'Architect and founder',

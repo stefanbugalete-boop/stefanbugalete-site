@@ -1,7 +1,7 @@
 // Builds the static site into dist/ from content.mjs. Run: node build.mjs (no dependencies).
 import { writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { SITE, ROUTES, CATEGORIES, PROJECTS, AWARDS, MENTIONS, T } from './content.mjs';
+import { SITE, ROUTES, VARIANTS, CATEGORIES, PROJECTS, AWARDS, MENTIONS, T } from './content.mjs';
 
 const OUT = 'dist';
 const BUILT = new Date().toISOString().slice(0, 10);
@@ -202,8 +202,8 @@ function project(t, p, i) {
   const page = { path: here, alt: { ro: projectPath(p, 'ro'), en: projectPath(p, 'en') }, title, description, nav: 'portfolio', ogImage: `/assets/projects/${p.images[0]}.jpg` };
   page.ld = ld(t, page, [{ '@type': 'CreativeWork', name, genre: catLabel(p.category), creator: { '@id': ID.person }, image: p.images.map((n) => abs(`/assets/projects/${n}.jpg`)), url: abs(here) }]);
   const L = t.lang === 'ro'
-    ? { cat: 'Categorie', year: 'An', area: 'Suprafață', place: 'Locație', next: 'Proiectul următor', index: 'Portofoliu' }
-    : { cat: 'Category', year: 'Year', area: 'Area', place: 'Location', next: 'Next project', index: 'Portfolio' };
+    ? { cat: 'Categorie', year: 'An', area: 'Suprafață', place: 'Locație', next: 'Proiectul următor', index: 'Lucrări' }
+    : { cat: 'Category', year: 'Year', area: 'Area', place: 'Location', next: 'Next project', index: 'Work' };
   const facts = [[L.cat, catLabel(p.category)], [L.year, p.year], [L.area, p.area], [L.place, p.place && (p.place[t.lang] || p.place)]].filter(([, v]) => v);
   const pad = (n) => String(n).padStart(2, '0');
   const total = p.images.length;
@@ -327,6 +327,88 @@ ${header(t, page)}
 ${footer(t, page)}`;
 }
 
+// ---------- second versions of Info and Contact, to compare (noindex, not in the menu) ----------
+const noindex = (html) => html.includes('name="robots"') ? html : html.replace('<link rel="canonical"', '<meta name="robots" content="noindex"><link rel="canonical"');
+
+function aboutV2(t) {
+  const a = t.about, here = VARIANTS.about[t.lang];
+  const page = { path: here, alt: VARIANTS.about, title: a.title, description: a.description, nav: 'about', type: 'AboutPage' };
+  page.ld = '';
+  const L = t.lang === 'ro'
+    ? { services: 'Servicii', awards: 'Premii', faq: 'Întrebări', press: 'Apariții', offices: 'Iași · București · la distanță', cta: 'Pornește un proiect' }
+    : { services: 'Services', awards: 'Awards', faq: 'Questions', press: 'Press', offices: 'Iași · Bucharest · remote', cta: 'Start a project' };
+  const pad = (n) => String(n).padStart(2, '0');
+  const sec = (n, id, title, body) => `<section class="ab3-sec" aria-labelledby="${id}">
+      <h2 id="${id}" class="ab3-sec__h"><span class="ab3-sec__n">${pad(n)}</span>${esc(title)}</h2>
+      ${body}
+    </section>`;
+  return noindex(`${head(t, page)}
+<body class="page-about page-about-v2">
+${header(t, page)}
+<main id="main" class="ab3">
+  <figure class="ab3-portrait">
+    <img src="${asset(here, 'stefan-portrait.jpg')}" width="1066" height="1600" alt="${esc(a.portraitAlt)}" fetchpriority="high">
+    <figcaption><span>${esc(SITE.name)}</span><span>${esc(a.role)}</span></figcaption>
+  </figure>
+  <div class="ab3-body">
+    <header class="ab3-head">
+      <p class="label" data-enter>${esc(t.nav.about)} · ${esc(L.offices)}</p>
+      <h1 class="ab3-h1" data-enter>${esc(a.bio[0])}</h1>
+      <div class="ab3-bio" data-enter>${a.bio.slice(1).map((x) => `<p>${esc(x)}</p>`).join('')}</div>
+    </header>
+    ${sec(1, 'sv-h', L.services, `<ol class="ab3-list">${a.services.map((s, i) => `<li><span>${pad(i + 1)}</span>${esc(s)}</li>`).join('')}</ol>`)}
+    ${sec(2, 'aw-h', L.awards, `<ul class="ab3-awards">${AWARDS.map((w) => `<li><span class="ab3-awards__project">${esc(w.project[t.lang])}</span><span class="ab3-awards__title">${esc(w.title[t.lang])}</span><span class="ab3-awards__meta">${esc(w.result[t.lang])} · ${w.year}</span></li>`).join('')}</ul>`)}
+    ${sec(3, 'fq-h', L.faq, `<div class="ab3-faq">${a.faq.map((f) => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('')}</div>`)}
+    ${sec(4, 'pr-h', L.press, `<ul class="ab3-press">${MENTIONS.map((m) => `<li><span>${esc(m.year)}</span><span>${m.url ? `<a class="ln" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.outlet)}</a>` : esc(m.outlet)}</span><span>${esc(m.title[t.lang] || m.title.ro)}</span></li>`).join('')}</ul>`)}
+    <p class="ab3-cta">${btn(rel(here, ROUTES.contact[t.lang]), L.cta)}</p>
+  </div>
+</main>
+${footer(t, page)}`);
+}
+
+function contactV2(t) {
+  const c = t.contact, f = c.form, here = VARIANTS.contact[t.lang];
+  const page = { path: here, alt: VARIANTS.contact, title: c.title, description: c.description, nav: 'contact', type: 'ContactPage' };
+  page.ld = '';
+  const L = t.lang === 'ro'
+    ? { write: 'Scrie direct', or: 'sau completează formularul' }
+    : { write: 'Write directly', or: 'or fill in the form' };
+  const cover = PROJECTS.find((p) => p.category === 'health') || PROJECTS[0];
+  const pad = (n) => String(n).padStart(2, '0');
+  let n = 0;
+  const field = (id, label, input, err, wide) => `<div class="field ct3-field${wide ? ' field--wide' : ''}"><label for="${id}"><span class="ct3-n">${pad(++n)}</span>${label}</label>${input}${err ? `<p class="field__err" id="${id}-err" hidden>${esc(err)}</p>` : ''}</div>`;
+  return noindex(`${head(t, page)}
+<body class="page-contact page-contact-v2">
+${header(t, page)}
+<main id="main" class="ct3">
+  <aside class="ct3-visual">
+    <img src="${img(here, cover.images[0])}" alt="" decoding="async">
+    <div class="ct3-visual__words">
+      <h1 class="ct3-h1">${esc(c.h1)}</h1>
+      <p class="ct3-topics">${c.topics.map(esc).join(' · ')}</p>
+    </div>
+  </aside>
+  <div class="ct3-body">
+    <dl class="ct3-facts">
+      <div><dt>${esc(L.write)}</dt><dd><a class="ln" href="mailto:${SITE.email}">${SITE.email}</a></dd></div>
+      <div><dt>Instagram</dt><dd><a class="ln" href="${SITE.instagram}" rel="me noopener" target="_blank">${SITE.instagramHandle}</a></dd></div>
+      <div class="ct3-facts__wide"><dt>${esc(c.offices)}</dt><dd>${esc(c.officesValue)}</dd></div>
+    </dl>
+    <p class="label ct3-or">${esc(L.or)}</p>
+    <form class="form ct-form ct3-form" action="mailto:${SITE.email}" method="post" enctype="text/plain" novalidate
+      data-email="${SITE.email}" data-subject="${esc(f.subject)}" data-opened="${esc(f.opened)}" data-err-one="${esc(f.errOne)}" data-err-many="${esc(f.errMany)}">
+      ${field('f-name', f.name, '<input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">', f.errName, true)}
+      ${field('f-email', f.email, '<input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">', f.errEmail, true)}
+      ${field('f-type', f.type, `<select id="f-type" name="type"><option value="">${esc(f.choose)}</option>${f.types.map((x) => `<option>${esc(x)}</option>`).join('')}</select>`, null, true)}
+      ${field('f-message', f.message, '<textarea id="f-message" name="message" rows="4" required aria-describedby="f-message-err"></textarea>', f.errMessage, true)}
+      <div class="form__foot"><p class="form__note">${esc(f.note)}</p><button class="ct-send" type="submit"><span>${esc(f.send)}</span>${ARROW}</button></div>
+      <p class="form__status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</main>
+${footer(t, page)}`);
+}
+
 function infinite(t, mode, asHome = false) {
   const here = asHome ? ROUTES.home[t.lang] : mode === 'colaj' ? '/test/colaj/' : '/test/coloane/';
   const h = t.home;
@@ -390,6 +472,8 @@ for (const lang of ['ro', 'en']) {
   PROJECTS.forEach((p, i) => write(projectPath(p, lang), project(t, p, i)));
   write(ROUTES.about[lang], about(t));
   write(ROUTES.contact[lang], contact(t));
+  write(VARIANTS.about[lang], aboutV2(t));
+  write(VARIANTS.contact[lang], contactV2(t));
 }
 
 write('assets/favicon.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 85 620 620"><style>path{fill:#1a1815}@media (prefers-color-scheme:dark){path{fill:#eae3d8}}</style><path d="${MARK}"/></svg>`);
@@ -450,8 +534,8 @@ write('llms.txt', `# ${SITE.brand}
 
 ## Pages
 - [Home](${abs(ROUTES.home.en)}) · [Acasă](${abs(ROUTES.home.ro)})
-- [Portfolio](${abs(ROUTES.portfolio.en)}) · [Portofoliu](${abs(ROUTES.portfolio.ro)})
-- [About](${abs(ROUTES.about.en)}) · [Despre](${abs(ROUTES.about.ro)})
+- [Work](${abs(ROUTES.portfolio.en)}) · [Lucrări](${abs(ROUTES.portfolio.ro)})
+- [Info](${abs(ROUTES.about.en)}) · [Info RO](${abs(ROUTES.about.ro)})
 - [Contact](${abs(ROUTES.contact.en)}) · [Contact RO](${abs(ROUTES.contact.ro)})
 
 ## Questions

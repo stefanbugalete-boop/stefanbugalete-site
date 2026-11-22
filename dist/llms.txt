@@ -15,8 +15,8 @@
 
 ## Pages
 - [Home](https://stefanbugalete.com/en/) · [Acasă](https://stefanbugalete.com/)
-- [Portfolio](https://stefanbugalete.com/en/portfolio/) · [Portofoliu](https://stefanbugalete.com/portofoliu/)
-- [About](https://stefanbugalete.com/en/about/) · [Despre](https://stefanbugalete.com/despre/)
+- [Work](https://stefanbugalete.com/en/work/) · [Lucrări](https://stefanbugalete.com/lucrari/)
+- [Info](https://stefanbugalete.com/en/info/) · [Info RO](https://stefanbugalete.com/info/)
 - [Contact](https://stefanbugalete.com/en/contact/) · [Contact RO](https://stefanbugalete.com/contact/)
 
 ## Questions
