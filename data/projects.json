@@ -1,0 +1,749 @@
+[
+  {
+    "slug": "velvet-clinic",
+    "placeholder": false,
+    "category": "health",
+    "title": {
+      "ro": "Velvet Clinic",
+      "en": "Velvet Clinic"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "velvet-clinic-1",
+      "velvet-clinic-2",
+      "velvet-clinic-3",
+      "velvet-clinic-4",
+      "velvet-clinic-5",
+      "velvet-clinic-6",
+      "velvet-clinic-7",
+      "velvet-clinic-8",
+      "velvet-clinic-9",
+      "velvet-clinic-10",
+      "velvet-clinic-11",
+      "velvet-clinic-12",
+      "velvet-clinic-13",
+      "velvet-clinic-14",
+      "velvet-clinic-15",
+      "velvet-clinic-16",
+      "velvet-clinic-17",
+      "velvet-clinic-18",
+      "velvet-clinic-19",
+      "velvet-clinic-20"
+    ]
+  },
+  {
+    "slug": "onora-clinic",
+    "placeholder": false,
+    "category": "health",
+    "title": {
+      "ro": "Onora Clinic",
+      "en": "Onora Clinic"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "onora-clinic-1",
+      "onora-clinic-2",
+      "onora-clinic-3",
+      "onora-clinic-4",
+      "onora-clinic-5",
+      "onora-clinic-6",
+      "onora-clinic-7",
+      "onora-clinic-8",
+      "onora-clinic-9",
+      "onora-clinic-10",
+      "onora-clinic-11",
+      "onora-clinic-12",
+      "onora-clinic-13",
+      "onora-clinic-14",
+      "onora-clinic-15",
+      "onora-clinic-16",
+      "onora-clinic-17",
+      "onora-clinic-18",
+      "onora-clinic-19",
+      "onora-clinic-20"
+    ]
+  },
+  {
+    "slug": "opera-dental",
+    "placeholder": false,
+    "category": "health",
+    "title": {
+      "ro": "Opera Dental",
+      "en": "Opera Dental"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "opera-dental-1",
+      "opera-dental-2",
+      "opera-dental-3",
+      "opera-dental-4",
+      "opera-dental-5",
+      "opera-dental-6",
+      "opera-dental-7",
+      "opera-dental-8",
+      "opera-dental-9",
+      "opera-dental-10",
+      "opera-dental-11"
+    ]
+  },
+  {
+    "slug": "maison-peau",
+    "placeholder": false,
+    "category": "health",
+    "title": {
+      "ro": "Maison Peau",
+      "en": "Maison Peau"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2026",
+    "area": "",
+    "place": "",
+    "images": [
+      "maison-peau-1",
+      "maison-peau-2",
+      "maison-peau-3",
+      "maison-peau-4",
+      "maison-peau-5",
+      "maison-peau-6",
+      "maison-peau-7",
+      "maison-peau-8",
+      "maison-peau-9",
+      "maison-peau-10",
+      "maison-peau-11",
+      "maison-peau-12",
+      "maison-peau-13",
+      "maison-peau-14",
+      "maison-peau-15",
+      "maison-peau-16",
+      "maison-peau-17",
+      "maison-peau-18"
+    ]
+  },
+  {
+    "slug": "kalipso-events",
+    "placeholder": false,
+    "category": "architecture",
+    "title": {
+      "ro": "Kalipso Events",
+      "en": "Kalipso Events"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2024",
+    "area": "",
+    "place": "",
+    "images": [
+      "kalipso-events-1",
+      "kalipso-events-2",
+      "kalipso-events-3",
+      "kalipso-events-4",
+      "kalipso-events-5",
+      "kalipso-events-6",
+      "kalipso-events-7",
+      "kalipso-events-8",
+      "kalipso-events-9",
+      "kalipso-events-10"
+    ]
+  },
+  {
+    "slug": "casa-bucur-interior",
+    "placeholder": false,
+    "category": "architecture",
+    "title": {
+      "ro": "Casa Bucur interior",
+      "en": "Casa Bucur interior"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2024",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-bucur-interior-1",
+      "casa-bucur-interior-2",
+      "casa-bucur-interior-3",
+      "casa-bucur-interior-4",
+      "casa-bucur-interior-5",
+      "casa-bucur-interior-6",
+      "casa-bucur-interior-7",
+      "casa-bucur-interior-8",
+      "casa-bucur-interior-9",
+      "casa-bucur-interior-10",
+      "casa-bucur-interior-11",
+      "casa-bucur-interior-12",
+      "casa-bucur-interior-13",
+      "casa-bucur-interior-14",
+      "casa-bucur-interior-15",
+      "casa-bucur-interior-16",
+      "casa-bucur-interior-17",
+      "casa-bucur-interior-18",
+      "casa-bucur-interior-19",
+      "casa-bucur-interior-20"
+    ]
+  },
+  {
+    "slug": "casa-bucur-exterior",
+    "placeholder": false,
+    "category": "architecture",
+    "title": {
+      "ro": "Casa Bucur Exterior",
+      "en": "Casa Bucur Exterior"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2024",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-bucur-exterior-1",
+      "casa-bucur-exterior-2",
+      "casa-bucur-exterior-3",
+      "casa-bucur-exterior-4",
+      "casa-bucur-exterior-5",
+      "casa-bucur-exterior-6",
+      "casa-bucur-exterior-7"
+    ]
+  },
+  {
+    "slug": "casa-pe-lac",
+    "placeholder": false,
+    "category": "architecture",
+    "title": {
+      "ro": "Casa pe lac",
+      "en": "Casa pe lac"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-pe-lac-1",
+      "casa-pe-lac-2",
+      "casa-pe-lac-3",
+      "casa-pe-lac-4",
+      "casa-pe-lac-5",
+      "casa-pe-lac-6",
+      "casa-pe-lac-7"
+    ]
+  },
+  {
+    "slug": "rosiori-apartments",
+    "placeholder": false,
+    "category": "architecture",
+    "title": {
+      "ro": "Rosiori Apartments",
+      "en": "Rosiori Apartments"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2026",
+    "area": "",
+    "place": "",
+    "images": [
+      "rosiori-apartments-8",
+      "rosiori-apartments-9",
+      "rosiori-apartments-11",
+      "rosiori-apartments-13",
+      "rosiori-apartments-14"
+    ]
+  },
+  {
+    "slug": "casa-m",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Casa M",
+      "en": "Casa M"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2026",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-m-1",
+      "casa-m-2",
+      "casa-m-3",
+      "casa-m-4",
+      "casa-m-5",
+      "casa-m-6",
+      "casa-m-7",
+      "casa-m-8",
+      "casa-m-9",
+      "casa-m-10",
+      "casa-m-11",
+      "casa-m-12",
+      "casa-m-13",
+      "casa-m-14",
+      "casa-m-15",
+      "casa-m-16",
+      "casa-m-17",
+      "casa-m-18",
+      "casa-m-19",
+      "casa-m-20"
+    ]
+  },
+  {
+    "slug": "penthouse-r",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Penthouse R",
+      "en": "Penthouse R"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "penthouse-r-1",
+      "penthouse-r-2",
+      "penthouse-r-3",
+      "penthouse-r-4",
+      "penthouse-r-5",
+      "penthouse-r-6",
+      "penthouse-r-7",
+      "penthouse-r-8",
+      "penthouse-r-9",
+      "penthouse-r-10",
+      "penthouse-r-11",
+      "penthouse-r-12",
+      "penthouse-r-13",
+      "penthouse-r-14"
+    ]
+  },
+  {
+    "slug": "apartament-icoanei",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Apartament Icoanei",
+      "en": "Apartament Icoanei"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2026",
+    "area": "",
+    "place": "",
+    "images": [
+      "apartament-icoanei-1",
+      "apartament-icoanei-2",
+      "apartament-icoanei-3",
+      "apartament-icoanei-4",
+      "apartament-icoanei-5",
+      "apartament-icoanei-6",
+      "apartament-icoanei-7",
+      "apartament-icoanei-8",
+      "apartament-icoanei-9",
+      "apartament-icoanei-10",
+      "apartament-icoanei-11",
+      "apartament-icoanei-12",
+      "apartament-icoanei-13"
+    ]
+  },
+  {
+    "slug": "casa-l-p",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Casa L.P.",
+      "en": "Casa L.P."
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2026",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-l-p-1",
+      "casa-l-p-2",
+      "casa-l-p-3",
+      "casa-l-p-4",
+      "casa-l-p-5",
+      "casa-l-p-6",
+      "casa-l-p-7",
+      "casa-l-p-8",
+      "casa-l-p-9",
+      "casa-l-p-10",
+      "casa-l-p-11",
+      "casa-l-p-12",
+      "casa-l-p-13",
+      "casa-l-p-14",
+      "casa-l-p-15",
+      "casa-l-p-16",
+      "casa-l-p-17"
+    ]
+  },
+  {
+    "slug": "casa-belbe",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Casa Belbe",
+      "en": "Casa Belbe"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2024",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-belbe-1",
+      "casa-belbe-2",
+      "casa-belbe-3",
+      "casa-belbe-4",
+      "casa-belbe-5",
+      "casa-belbe-6",
+      "casa-belbe-7",
+      "casa-belbe-8",
+      "casa-belbe-9",
+      "casa-belbe-10",
+      "casa-belbe-11",
+      "casa-belbe-12"
+    ]
+  },
+  {
+    "slug": "casa-valerie",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Casa Valerie",
+      "en": "Casa Valerie"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-valerie-1",
+      "casa-valerie-2",
+      "casa-valerie-3",
+      "casa-valerie-4",
+      "casa-valerie-5",
+      "casa-valerie-6",
+      "casa-valerie-7",
+      "casa-valerie-8",
+      "casa-valerie-9",
+      "casa-valerie-10",
+      "casa-valerie-11",
+      "casa-valerie-12",
+      "casa-valerie-13",
+      "casa-valerie-14"
+    ]
+  },
+  {
+    "slug": "casa-v",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Casa V.",
+      "en": "Casa V."
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2024",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-v-1",
+      "casa-v-2",
+      "casa-v-3",
+      "casa-v-4",
+      "casa-v-5",
+      "casa-v-6",
+      "casa-v-7",
+      "casa-v-8",
+      "casa-v-9",
+      "casa-v-10",
+      "casa-v-11",
+      "casa-v-12",
+      "casa-v-13"
+    ]
+  },
+  {
+    "slug": "mountain-retreat",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Mountain retreat",
+      "en": "Mountain retreat"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2024",
+    "area": "",
+    "place": "",
+    "images": [
+      "mountain-retreat-1",
+      "mountain-retreat-2",
+      "mountain-retreat-3",
+      "mountain-retreat-4",
+      "mountain-retreat-5",
+      "mountain-retreat-6",
+      "mountain-retreat-7",
+      "mountain-retreat-8",
+      "mountain-retreat-9",
+      "mountain-retreat-10",
+      "mountain-retreat-11",
+      "mountain-retreat-12",
+      "mountain-retreat-13",
+      "mountain-retreat-14",
+      "mountain-retreat-15",
+      "mountain-retreat-16",
+      "mountain-retreat-17",
+      "mountain-retreat-18"
+    ]
+  },
+  {
+    "slug": "apartament-i",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Apartament I.",
+      "en": "Apartament I."
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "apartament-i-1",
+      "apartament-i-2",
+      "apartament-i-3",
+      "apartament-i-4",
+      "apartament-i-5",
+      "apartament-i-6",
+      "apartament-i-7",
+      "apartament-i-8",
+      "apartament-i-9",
+      "apartament-i-10",
+      "apartament-i-11"
+    ]
+  },
+  {
+    "slug": "apartamente-v",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Apartamente V.",
+      "en": "Apartamente V."
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2022",
+    "area": "",
+    "place": "",
+    "images": [
+      "apartamente-v-1",
+      "apartamente-v-2",
+      "apartamente-v-3",
+      "apartamente-v-4",
+      "apartamente-v-5",
+      "apartamente-v-6",
+      "apartamente-v-7",
+      "apartamente-v-8",
+      "apartamente-v-9",
+      "apartamente-v-10",
+      "apartamente-v-11"
+    ]
+  },
+  {
+    "slug": "casa-voin",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Casa Voin",
+      "en": "Casa Voin"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2023",
+    "area": "",
+    "place": "",
+    "images": [
+      "casa-voin-1",
+      "casa-voin-2",
+      "casa-voin-3",
+      "casa-voin-4",
+      "casa-voin-5",
+      "casa-voin-6",
+      "casa-voin-7",
+      "casa-voin-8",
+      "casa-voin-9",
+      "casa-voin-10",
+      "casa-voin-11",
+      "casa-voin-12",
+      "casa-voin-13",
+      "casa-voin-14",
+      "casa-voin-15"
+    ]
+  },
+  {
+    "slug": "penthouse-constanta",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Penthouse Constanta",
+      "en": "Penthouse Constanta"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2024",
+    "area": "",
+    "place": "",
+    "images": [
+      "penthouse-constanta-1",
+      "penthouse-constanta-2",
+      "penthouse-constanta-3",
+      "penthouse-constanta-4",
+      "penthouse-constanta-5",
+      "penthouse-constanta-6",
+      "penthouse-constanta-7",
+      "penthouse-constanta-8",
+      "penthouse-constanta-9",
+      "penthouse-constanta-10",
+      "penthouse-constanta-11",
+      "penthouse-constanta-12",
+      "penthouse-constanta-13",
+      "penthouse-constanta-14",
+      "penthouse-constanta-15",
+      "penthouse-constanta-16",
+      "penthouse-constanta-17",
+      "penthouse-constanta-18",
+      "penthouse-constanta-19",
+      "penthouse-constanta-20"
+    ]
+  },
+  {
+    "slug": "ghiuzan",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Ghiuzan",
+      "en": "Ghiuzan"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "ghiuzan-1",
+      "ghiuzan-2",
+      "ghiuzan-3",
+      "ghiuzan-4",
+      "ghiuzan-5",
+      "ghiuzan-6",
+      "ghiuzan-7",
+      "ghiuzan-8",
+      "ghiuzan-9",
+      "ghiuzan-10",
+      "ghiuzan-11",
+      "ghiuzan-12",
+      "ghiuzan-13",
+      "ghiuzan-14",
+      "ghiuzan-15",
+      "ghiuzan-16",
+      "ghiuzan-17"
+    ]
+  },
+  {
+    "slug": "luta-breazu",
+    "placeholder": false,
+    "category": "interior",
+    "title": {
+      "ro": "Luta Breazu",
+      "en": "Luta Breazu"
+    },
+    "summary": {
+      "ro": "",
+      "en": ""
+    },
+    "year": "2025",
+    "area": "",
+    "place": "",
+    "images": [
+      "luta-breazu-1",
+      "luta-breazu-2",
+      "luta-breazu-3",
+      "luta-breazu-4",
+      "luta-breazu-5",
+      "luta-breazu-6",
+      "luta-breazu-7",
+      "luta-breazu-8",
+      "luta-breazu-9",
+      "luta-breazu-10",
+      "luta-breazu-11",
+      "luta-breazu-12",
+      "luta-breazu-13",
+      "luta-breazu-14",
+      "luta-breazu-15",
+      "luta-breazu-16",
+      "luta-breazu-17",
+      "luta-breazu-18",
+      "luta-breazu-19",
+      "luta-breazu-20"
+    ]
+  }
+]

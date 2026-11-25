@@ -159,7 +159,7 @@ for (const it of items) {
       const big = join(OUT_DIR, `${name}.jpg`), small = join(OUT_DIR, `${name}-sm.jpg`);
       if (!FORCE && existsSync(big) && existsSync(small)) continue;
       const src = join(TMP, `${slug}-${k + 1}${(files[k].name.match(/\.\w+$/) || ['.jpg'])[0]}`);
-      await download(files[k].id, src);
+      try { await download(files[k].id, src); } catch (e) { names.pop(); console.log(`\n  (sar peste ${files[k].name}: ${e.message})`); continue; }
       jobs.push({ src, big, small });
     }
     resizeAll(jobs);
