@@ -10,28 +10,362 @@
 #  5. Salvează fișierul, apoi rulează:  node import-drive.mjs
 #
 # Rândurile care încep cu # sunt comentarii și sunt ignorate.
-# Proiectul de mai jos este un EXEMPLU: înlocuiește-l cu proiectele tale (sau șterge-l).
+# Lista vine din tabelul „Proiecte” din Google Drive. Ordinea de aici este ordinea de pe site.
 
-Nume: Penthouse R. 
+Nume: Velvet Clinic
 Nume EN (opțional):
-Categorie: Interior 
+Categorie: Health
 An (opțional): 2025
-Suprafață (opțional): 120 m²
-Oraș (opțional): Bucuresti
-Descriere: Proiect de design interior pentru un penthouse contemporan, cu living open-space pe două niveluri, scară sculpturală și o paletă luminoasă de tonuri calde, echilibrată prin accente negre.
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1CEwHphnhyCn_Z85h8UELXuH5TGU-bFu6?usp=sharing
+
+---
+
+Nume: Onora Clinic
+Nume EN (opțional):
+Categorie: Health
+An (opțional): 2025
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1KD0Hyg20O2iR3Sw-i9NWMg4w2SZ7glmF?usp=sharing
+
+---
+
+Nume: Opera Dental
+Nume EN (opțional):
+Categorie: Health
+An (opțional): 2025
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1nlAbW9LO2wSDKD-PGEPbpBc_LXjHXNdb?usp=sharing
+
+---
+
+Nume: Maison Peau
+Nume EN (opțional):
+Categorie: Health
+An (opțional): 2026
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1ym0maXDH9vYC9o7MTSLw6Gt22Y3ZxPPa?usp=sharing
+
+---
+
+Nume: Kalipso Events
+Nume EN (opțional):
+Categorie: Architecture
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1dBcVhvwQm6bid-I2FhlfGYfM21kSdFzW?usp=sharing
+
+---
+
+Nume: Casa Bucur interior
+Nume EN (opțional):
+Categorie: Architecture
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1kUBOp3eCSal78njDKBW99VlacrKbUJi0?usp=sharing
+
+---
+
+Nume: Casa Bucur Exterior
+Nume EN (opțional):
+Categorie: Architecture
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1l7acGNN2aM_UgkPdmBdZbjSdKmfov4p2?usp=sharing
+
+---
+
+Nume: Casa pe lac
+Nume EN (opțional):
+Categorie: Architecture
+An (opțional): 2025
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1ymxlsdUv9bZTg4DsRB-JFec7Odr-aCXo?usp=sharing
+
+---
+
+Nume: Rosiori Apartments
+Nume EN (opțional):
+Categorie: Architecture
+An (opțional): 2026
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1U9Sy1GDKIz3Kcy7-WYU0nAealRRuho0i?usp=sharing
+
+---
+
+Nume: Casa
+Nume EN (opțional):
+Categorie: Architecture
+An (opțional): 2023
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: 
+
+---
+
+Nume: Casa M
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2026
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1xILf83EBAp7iHBhKgXHzQk7c8xXuHkcz?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Penthouse R
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2025
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
 Descriere EN (opțional):
 Poze: https://drive.google.com/drive/folders/1ZiQJFc-AvoDKgsUcInREWofqROEqnzN6?usp=sharing
 
 ---
 
-Nume: Opera Dental 
+Nume: Apartament Icoanei
 Nume EN (opțional):
-Categorie: Health
-An (opțional): 2025
-Suprafață (opțional): 300
-Oraș (opțional): Bucuresti
-Descriere:
+Categorie: Interior
+An (opțional): 2026
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
 Descriere EN (opțional):
-Poze: https://drive.google.com/drive/folders/1nlAbW9LO2wSDKD-PGEPbpBc_LXjHXNdb?usp=sharing
+Poze: https://drive.google.com/drive/folders/1f8RB89TEvERT8Qm1R86kDuDA-QYnY60L?dmr=1&ec=wgc-drive-hero-goto
 
 ---
+
+Nume: Casa L.P.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2026
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1Cfia5oozVWMbQiARzStCYCCHjZ8kLWHV?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Casa Belbe
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1S4L1NDfVvoEvfCXofsQHUt1hvyRe2dCz?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Casa Valerie
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2025
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1U4W7y29zEalMl052rEvUHyO7SwkZcqzE?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Apartment M.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1BJZikUI0TgbJibn2wVsaIVF-1yqPq7Ep?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Casa V.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1-s0TkNsXstiWTc19wNcCEIoaZ0x3cu5q?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Mountain retreat
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/10-Ld7bAkS3C6Kdr39MxCrkigwfhBnjr-?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Apartament I.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2025
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/16jyk8AtnfJnXVEvm30VvJMInZRqW9-kG?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Apartamente V.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2022
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1SIBt83h6tSVUBSoZN63HdrpZOCfdUo-j?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Casa Voin
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2023
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1hXw9dAqvrCsZAwj2K7PiiwuQLl2akd7t?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Apartament D.U.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1bvt5iVXnBUgwldJPy2_LxjactdQxwvXS?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Cannfield Gardens
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2023
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: 
+
+---
+
+Nume: Casa H.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2023
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1788l_E30ayZ-LOgK0qDwgdxBuM6u1GOY?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Penthouse D.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1H3fH5etSbeGJ0GM8oNvDGEfjejzx-UqS?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Penthouse Constanta
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2024
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1I5TIL5lxDNmURni4mIm34t5SBjGiUbZE?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Ghiuzan
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2025
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/18Y8YvyUScPOZBvN_itMFUvJznlUA5bSW?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Luta Breazu
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2025
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: https://drive.google.com/drive/folders/1X-pUsjzqwiva8nthSm7tVS6mxrP9YC4e?dmr=1&ec=wgc-drive-hero-goto
+
+---
+
+Nume: Apartament K.
+Nume EN (opțional):
+Categorie: Interior
+An (opțional): 2022
+Suprafață (opțional):
+Oraș (opțional): 
+Descriere: 
+Descriere EN (opțional):
+Poze: 

@@ -5,7 +5,8 @@
 //   node import-drive.mjs            import new photos (photos already downloaded are kept)
 //   node import-drive.mjs --force    download every photo again
 //
-// No extra installs: Node 18+ and Windows (resizing uses the built-in .NET image library through PowerShell).
+// No extra installs on Windows: Node 18+ (resizing uses the built-in .NET image library through PowerShell).
+// On Linux or macOS, resizing uses ImageMagick (`convert`).
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -18,7 +19,7 @@ const OUT_DIR = join(ROOT, 'dist', 'assets', 'projects');
 const DATA = join(ROOT, 'data', 'projects.json');
 const TMP = join(tmpdir(), 'sb-drive-import');
 const FORCE = process.argv.includes('--force');
-const MAX_PER_PROJECT = 14;
+const MAX_PER_PROJECT = 20;
 
 // ---------- 1. read proiecte.txt ----------
 const FIELDS = {
@@ -55,19 +56,36 @@ function folderId(url) {
 }
 
 // ---------- 2. list a public Drive folder (no API key needed) ----------
-async function listFolder(id) {
+// Lists the photos in a folder. If the photos are in subfolders (one per room, say), it picks evenly
+// from each subfolder, so the selection covers the whole project.
+async function readFolder(id) {
   const res = await fetch(`https://drive.google.com/embeddedfolderview?id=${id}#list`);
   if (!res.ok) throw new Error(`Folderul ${id} nu poate fi citit (HTTP ${res.status}). Este partajat cu „Oricine are linkul”?`);
   const html = await res.text();
-  const files = [];
-  const re = /id="entry-([\w-]+)"[\s\S]*?class="flip-entry-title">([^<]+)</g;
+  const files = [], dirs = [];
+  const re = /<a href="https:\/\/drive\.google\.com\/(drive\/folders|file\/d)\/([\w-]+)[^"]*"[^>]*>[\s\S]*?class="flip-entry-title">([^<]+)</g;
   let m;
   while ((m = re.exec(html))) {
-    const name = m[2].trim();
-    if (/\.(jpe?g|png|webp|tiff?)$/i.test(name)) files.push({ id: m[1], name });
+    const name = m[3].trim().replace(/&amp;/g, '&');
+    if (m[1].startsWith('drive')) dirs.push({ id: m[2], name });
+    else if (/\.(jpe?g|png|webp|tiff?)$/i.test(name) || !/\.\w{2,4}$/.test(name)) files.push({ id: m[2], name });
   }
-  if (!files.length) throw new Error(`Nu am găsit poze în folderul ${id}. Verifică partajarea și că pozele sunt direct în folder (nu în subfoldere).`);
-  return files.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+  const byName = (a, b) => a.name.localeCompare(b.name, undefined, { numeric: true });
+  return { files: files.sort(byName), dirs: dirs.sort(byName) };
+}
+const spread = (list, n) => list.length <= n ? list : Array.from({ length: n }, (_, k) => list[Math.floor((k * list.length) / n)]);
+async function listFolder(id, max) {
+  const { files, dirs } = await readFolder(id);
+  if (files.length || !dirs.length) {
+    if (!files.length) throw new Error(`Nu am găsit poze în folderul ${id}. Este partajat cu „Oricine are linkul”?`);
+    return files.slice(0, max);
+  }
+  const groups = (await Promise.all(dirs.map(async (d) => (await readFolder(d.id)).files))).filter((g) => g.length);
+  if (!groups.length) throw new Error(`Nu am găsit poze în subfolderele folderului ${id}.`);
+  const total = groups.reduce((s, g) => s + g.length, 0);
+  const share = groups.map((g) => Math.max(1, Math.round((g.length / total) * max)));
+  while (share.reduce((a, b) => a + b, 0) > max) share[share.indexOf(Math.max(...share))]--;
+  return groups.flatMap((g, k) => spread(g, share[k]));
 }
 
 async function download(fileId, dest) {
@@ -80,6 +98,15 @@ async function download(fileId, dest) {
 // ---------- 3. resize with Windows' built-in image library ----------
 function resizeAll(jobs) {
   if (!jobs.length) return;
+  if (process.platform !== 'win32') {
+    for (const j of jobs) {
+      for (const [size, dst] of [[1800, j.big], [900, j.small]]) {
+        execFileSync('convert', [j.src + '[0]', '-auto-orient', '-colorspace', 'sRGB', '-resize', `${size}x${size}>`, '-strip', '-quality', '80', dst]);
+      }
+      rmSync(j.src, { force: true });
+    }
+    return;
+  }
   const list = join(TMP, 'jobs.json');
   writeFileSync(list, JSON.stringify(jobs));
   const ps = `
@@ -123,7 +150,7 @@ for (const it of items) {
   const slug = slugify(it.title_ro);
   process.stdout.write(`• ${it.title_ro} … `);
   try {
-    const files = (await listFolder(folderId(it.folder))).slice(0, MAX_PER_PROJECT);
+    const files = await listFolder(folderId(it.folder), MAX_PER_PROJECT);
     const jobs = [];
     const names = [];
     for (let k = 0; k < files.length; k++) {
@@ -131,7 +158,7 @@ for (const it of items) {
       names.push(name);
       const big = join(OUT_DIR, `${name}.jpg`), small = join(OUT_DIR, `${name}-sm.jpg`);
       if (!FORCE && existsSync(big) && existsSync(small)) continue;
-      const src = join(TMP, `${slug}-${k + 1}${files[k].name.match(/\.\w+$/)[0]}`);
+      const src = join(TMP, `${slug}-${k + 1}${(files[k].name.match(/\.\w+$/) || ['.jpg'])[0]}`);
       await download(files[k].id, src);
       jobs.push({ src, big, small });
     }
